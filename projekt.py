@@ -84,6 +84,20 @@ print(dfcopy.describe().T)
 # test preparation course: completed=0, none=1,
 # """)
 
+# Obrazuje dane
+
+#value1 = list(df['lunch'].values).count('free/reduced')
+#value2 = list(df['lunch'].values).count('standard')
+
+#slices = [value1, value2]
+#live = ['Darmowe', 'Płatne',]
+#kolory = ['orange','m']
+
+#plt.pie(slices, labels = live, colors=kolory, startangle=90, shadow=True, explode=(0,0.1), autopct='%1.1f%%')
+
+#plt.title("Rodzaj posiłków na stołówce\n")
+#plt.show()
+
 #Zalezność między wynikami testów a innymi parametrami obiektowymi
 #sns.pairplot(df, hue='test preparation course')
 #plt.show()
@@ -250,7 +264,7 @@ elif the_bestAlg == accuracySVM:
     print("\nWyniki ogólne:")
     print(classification_report(predSVM, test_y))
 elif the_bestAlg == accuracyRF:
-    print(f"\nW tym przypadku najlepszym algorytmem jest KNN, k=5: {accuracyRF}")
+    print(f"\nW tym przypadku najlepszym algorytmem jest Random Forest: {accuracyRF}")
     print("\nWyniki ogólne:")
     print(classification_report(predRF, test_y))
 elif the_bestAlg == accuracyTree:
@@ -258,7 +272,7 @@ elif the_bestAlg == accuracyTree:
     print("\nWyniki ogólne:")
     print(classification_report(predTree, test_y))
 elif the_bestAlg == accuracybg:
-    print(f"\nW tym przypadku najlepszym algorytmem jest Decision tree: {accuracybg}")
+    print(f"\nW tym przypadku najlepszym algorytmem jest Decision tree with bagging: {accuracybg}")
     print("\nWyniki ogólne:")
     print(classification_report(predbg, test_y))
 elif the_bestAlg == accuracyNeural_network:
